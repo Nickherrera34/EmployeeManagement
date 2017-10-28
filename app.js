@@ -23,8 +23,17 @@ $(document).ready(function(){
 
 	function calculations(){
 
-		var startDate = new Date($("#startDateInput").val().trim());
-		console.log("Start Date: " + startDate);
+		var startDate = $("#startDateInput").val().trim();
+		var dateSplit = startDate.split('/');
+		var formattedDate = dateSplit[1]+ '/' + dateSplit[0]+ '/'+dateSplit[2];
+		var newDate = moment(new Date(formattedDate));
+
+		var todaysDate = moment(new Date());
+		//var monthsWorked = startDate.diff(todaysDate,'months');
+		console.log("Start Date: " + newDate);
+		console.log("Today's Date: " + todaysDate);
+		//console.log("Months Worked: " + monthsWorked);
+
 
 	}//end of calculations()
 
