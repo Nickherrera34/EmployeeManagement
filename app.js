@@ -1,6 +1,10 @@
 
 var startDate;
 var monthsWorked;
+var name = "";
+var role = "";
+
+
 
 $(document).ready(function(){
 	 // Initialize Firebase
@@ -20,6 +24,7 @@ $(document).ready(function(){
 	$("#submit").on("click", function(event){
 		event.preventDefault();
 		calculations();
+
 
 	});
 
