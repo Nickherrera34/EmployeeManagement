@@ -1,15 +1,19 @@
 
+$(document).ready(function(){
+	
 
-$("#submit").on("click", function(){
-	calculations();
+	$("#submit").on("click", function(event){
+		event.preventDefault();
+		calculations();
 
-});
+	});
 
 
-function calculations(){
+	function calculations(){
 
-	var startDate = $("#startDate").val().trim();
-	console.log("Start Date: " + startDate);
+		var startDate = new Date($("#startDateInput").val().trim());
+		console.log("Start Date: " + startDate);
 
-}//end of calculations()
+	}//end of calculations()
 
+});//end document.ready()
