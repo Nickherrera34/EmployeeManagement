@@ -24,7 +24,7 @@ $(document).ready(function(){
 
 	$("#submit").on("click", function(event){
 		event.preventDefault();
-
+		$("#tableBody").empty();
 
 		name = $("#nameInput").val().trim();
 		role = $("#roleInput").val().trim();
@@ -43,6 +43,27 @@ $(document).ready(function(){
 		});//end of push()
 
 
+	});
+
+	//on Database Change add elements to table
+	database.ref().on("value", function(snapshot) {
+		snapshot.forEach(function(childSnapshot) {
+			var newTableRow = $("<tr>");
+			var nameData = $("<td>");
+			var roleData = $("<td>");
+			var startDateData = $("<td>");
+			var monthsWorkedData = $("<td>");
+			var monthlyRateData = $("<td>");
+			var totalBilledData = $("<td>");
+			nameData.html(childSnapshot.val().name);
+			roleData.html(childSnapshot.val().role);
+			startDateData.html(childSnapshot.val().startDate);
+			monthsWorkedData.html(childSnapshot.val().monthsWorked);
+			monthlyRateData.html(childSnapshot.val().monthlyRate);
+			totalBilledData.html(childSnapshot.val().totalBilled);
+			newTableRow.append(nameData, roleData, startDateData, monthsWorkedData, monthlyRateData, totalBilledData);
+			$("#tableBody").append(newTableRow);
+		});
 	});
 
 
