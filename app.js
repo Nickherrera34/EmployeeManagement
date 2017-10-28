@@ -11,7 +11,7 @@ $(document).ready(function(){
   };
   firebase.initializeApp(config);
   
-  var database = firebase.data();
+  var database = firebase.database();
 
 
 	$("#submit").on("click", function(event){
@@ -26,11 +26,14 @@ $(document).ready(function(){
 		var startDate = $("#startDateInput").val().trim();
 		var dateSplit = startDate.split('/');
 		var formattedDate = dateSplit[1]+ '/' + dateSplit[0]+ '/'+dateSplit[2];
-		var newDate = new Date(formattedDate);
+		var newDate = moment(new Date(formattedDate));
 
 		var todaysDate = moment(new Date());
+		//var monthsWorked = startDate.diff(todaysDate,'months');
 		console.log("Start Date: " + newDate);
 		console.log("Today's Date: " + todaysDate);
+		//console.log("Months Worked: " + monthsWorked);
+
 
 	}//end of calculations()
 
