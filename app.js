@@ -4,6 +4,7 @@ var monthsWorked;
 var monthlyRate;
 var totalBilled;
 
+
 $(document).ready(function(){
 	 // Initialize Firebase
   var config = {
@@ -21,6 +22,7 @@ $(document).ready(function(){
 
 	$("#submit").on("click", function(event){
 		event.preventDefault();
+
 		calculations();
 
 	});
