@@ -18,3 +18,13 @@
 	border-width: 5px;
 	border-color:blue;
 }
+
+.table-header{
+	text-align: center;
+	margin:auto;
+}
+
+#employee-entry{
+	margin-bottom: 25px;
+	margin:auto;
+}
