@@ -27,23 +27,23 @@
 
 
 
-	<section id="employee-entry">
-		<table>
-		  <tr>
-		    <th class="table-header">Employee Name</th>
-		    <th class="table-header">Role</th> 
-		    <th class="table-header">Start Date</th>
-		    <th class="table-header">Months Worked</th>
-		    <th class="table-header">Monthly Rate ($)</th>
-		    <th class="table-header">Total Billed ($)</th>
-		  </tr>
-		 	<hr>
-		  <tr>
-		    <td></td>
-		    <td></td> 
-		    <td></td>
-		  </tr>
-		</table>
+	<section id="addEmployeeTable">
+	<div class="section-banner">Current Employees</div>
+	<table class="table">
+  <thead>
+    <tr>
+      <th>Employee Name</th>
+      <th>Role</th>
+      <th>Start Date</th>
+      <th>Months Worked</th>
+      <th>Monthly Rate ($)</th>
+      <th>Total Billed ($)</th>
+    </tr>
+  </thead>
+  <tbody>
+    
+  </tbody>
+</table>
 	</section>
 
 
@@ -51,6 +51,7 @@
 
 
 	<section id="formSubmit">
+		<div class="section-banner">Add Employee</div>
 		<form >
   			<div class="form-group">
    				<label class="col-form-label" for="formGroupExampleInput">Employee Name</label>
@@ -68,6 +69,7 @@
     			<label class="col-form-label" for="formGroupExampleInput2">Monthly Rate</label>
    			 	<input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Another input">
   			</div>
+  		<button id="submit" class="btn btn-primary" type="submit">Button</button>
 </form>
 	</section>
 

@@ -28,3 +28,15 @@
 	margin-bottom: 25px;
 	margin:auto;
 }
+
+.section-banner{
+	background-color: #122f6d;
+	color: #fff;
+	padding:5px;
+
+}
+
+#submit{
+	background-color: #122f6d;
+	border: none;
+}
