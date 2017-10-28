@@ -1,6 +1,8 @@
 
 var startDate;
 var monthsWorked;
+var monthlyRate;
+var totalBilled;
 
 $(document).ready(function(){
 	 // Initialize Firebase
@@ -34,9 +36,14 @@ $(document).ready(function(){
 		var todaysDate = moment(new Date());
 		monthsWorked = todaysDate.diff(newDate,'months');
 
+		monthlyRate = $("#monthlyRateInput").val().trim();
+		totalBilled = monthlyRate * monthsWorked;
+
 		console.log("Start Date: " + newDate);
 		console.log("Today's Date: " + todaysDate);
 		console.log("Months Worked: " + monthsWorked + " months");
+		console.log("Months Rate: " + monthlyRate);
+		console.log("Total Billed: " + totalBilled);
 
 
 	}//end of calculations()
