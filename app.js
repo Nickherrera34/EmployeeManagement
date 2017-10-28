@@ -11,8 +11,14 @@ $(document).ready(function(){
 
 	function calculations(){
 
-		var startDate = new Date($("#startDateInput").val().trim());
-		console.log("Start Date: " + startDate);
+		var startDate = $("#startDateInput").val().trim();
+		var dateSplit = startDate.split('/');
+		var formattedDate = dateSplit[1]+ '/' + dateSplit[0]+ '/'+dateSplit[2];
+		var newDate = new Date(formattedDate);
+
+		var todaysDate = moment(new Date());
+		console.log("Start Date: " + newDate);
+		console.log("Today's Date: " + todaysDate);
 
 	}//end of calculations()
 
