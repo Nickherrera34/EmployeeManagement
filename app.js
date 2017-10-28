@@ -36,6 +36,27 @@ $(document).ready(function(){
 
 	});
 
+	//on Database Change add elements to table
+	database.on("value", function(snapshot) {
+		snapshot.forEach(function(childSnapshot) {
+			var newTableRow = $("<tr>");
+			var nameData = $("<td>");
+			var roleData = $("<td>");
+			var startDateData = $("<td>");
+			var monthsWorkedData = $("<td>");
+			var monthlyRateData = $("<td>");
+			var totalBilledData = $("<td>");
+			nameData.html(name);
+			roleData.html(role);
+			startDateData.html(startDate);
+			monthsWorkedData.html(monthsWorked);
+			monthlyRateData.html(monthlyRate);
+			totalBilledData.html(totalBilled);
+			newTableRow.append(nameData, roleData, startDateData, monthsWorkedData, monthlyRateData, totalBilledData);
+			$("#inputTable").append(newTableRow);
+		});
+	});
+
 
 	function calculations(){
 
