@@ -1,6 +1,8 @@
 
 var startDate;
 var monthsWorked;
+var name = "";
+var role = "";
 var monthlyRate;
 var totalBilled;
 
@@ -23,7 +25,14 @@ $(document).ready(function(){
 	$("#submit").on("click", function(event){
 		event.preventDefault();
 
+
+		name = $("#nameInput").val().trim();
+		role = $("#roleInput").val().trim();
+		console.log(name, role);
+
+
 		calculations();
+
 
 	});
 
