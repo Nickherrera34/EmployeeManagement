@@ -30,8 +30,17 @@ $(document).ready(function(){
 		role = $("#roleInput").val().trim();
 		console.log(name, role);
 
-
 		calculations();
+
+		database.ref().push({
+			name: name,
+			role: role,
+			startDate: startDate,
+			monthsWorked: monthsWorked,
+			monthlyRate: monthlyRate,
+			totalBilled: totalBilled
+
+		});//end of push()
 
 
 	});
