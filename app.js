@@ -11,7 +11,7 @@ $(document).ready(function(){
   };
   firebase.initializeApp(config);
   
-  var database = firebase.data();
+  var database = firebase.database();
 
 
 	$("#submit").on("click", function(event){
